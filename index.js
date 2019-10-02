@@ -7,8 +7,8 @@ function ask(questionText) {
   });
 }
 
-// remember the StateMachine lecture
-// https://bootcamp.burlingtoncodeacademy.com/lessons/cs/state-machines
+// the StateMachine lecture:
+// https://bootcamp.burlingtoncodeacademy.com/lessons/javascript/state-machines
 let states = {
   'roomOne': { canChangeTo: [ 'roomTwo' ] },
   'roomTwo': { canChangeTo: [ 'roomThree' ] },
