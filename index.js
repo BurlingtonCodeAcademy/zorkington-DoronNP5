@@ -11,11 +11,11 @@ function ask(questionText) {
 // https://bootcamp.burlingtoncodeacademy.com/lessons/javascript/state-machines
 let states = {
   'roomOne': { canChangeTo: [ 'roomTwo' ] },
-  'roomTwo': { canChangeTo: [ 'roomThree' ] },
-  'roomThree': { canChangeTo: [ 'roomOne' ] }
+  'roomTwo': { canChangeTo: [ 'roomOne', 'roomThree' ] },
+  'roomThree': { canChangeTo: [ 'roomTwo' ] }
 };
 
-let currentState = "green";
+let currentState = "roomOne";
 
 function enterState(newState) {
   let validTransitions = states[currentState].canChangeTo;
